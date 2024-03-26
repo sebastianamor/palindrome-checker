@@ -1,10 +1,10 @@
 const palindromeBtn = document.getElementById("check-btn")
-const inputText = document.getElementById("text-input")
+const iText = document.getElementById("text-input")
 const resultInput = document.getElementById("result")
 
 function cleanInputString(srt) {
     const regex = /[+-\s]/g;
-    return srt.replace(regex,"");
+    return srt.replace(regex,'');
 }
 const paliCheck = (input) => {
     let cleanInput = cleanInputString(input); 
@@ -12,18 +12,18 @@ const paliCheck = (input) => {
    let arrayedInput = casedInput.split("");
    let reversedArray = arrayedInput.reverse();
 
-   if (arrayedInput === reversedArray){
+   if (arrayedInput === reversedArray ){
     return true ;
    } else {
     return false ; 
    }
-};
+}; 
 
-palindromeBtn?.addEventListener( 'click', () => {
-    if (inputText.value == "") {
+palindromeBtn?.addEventListener('click', () => {
+    if (iText.value == "") {
         alert("pleace input a value");
-    }else if (paliCheck(inputText.value)){
-     resultInput.innerText = `${inputText.value} is a palindrome ` 
-    } else { resultInput.innerText = `${inputText.value} is not a palindrome ` 
-    };
-});
+    }else if (paliCheck(iText.value)){
+     resultInput.innerText = `${iText.value} is a palindrome ` 
+    } else { resultInput.innerText = `${iText.value} is not a palindrome ` 
+    }
+}); 
